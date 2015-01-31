@@ -2,59 +2,165 @@
 
 @import "compass/css3";
 @import "compass/css3/transition";
+@import "compass/css3/border-radius";
 @import "compass/utilities";
 
 
 
-@media #{$small-only} { // mobile screens
+@media #{$small-up} { // mobile screens
 
 	body{
 		background-color: $background;
-		font-family: $body;
+		font: 26px/22px $body;
 		height: 100%;
-	}
-	p{
-		padding: 1em;
+		color: $text-color;
 	}
 
-	header{
-		background-color: $header-color;
-		display: block;
-		position: relative;
-		min-height: 100px;
-		.stuck{
-			background-color: $header-transparent;
-			position: fixed;
-			min-height: 55px;
-			@include transition-property(width);
-			@include transition-duration(0.5s);
+	a{
+		font: $body;
+		color: $white;
+	}
+	p{
+		&:first-child:first-letter{
+			float:left;
+			font-size: 3em;
+			line-height: 1em;
+			padding-right: 0.2em;
 		}
 	}
 
+	header{
+		height: 100px;
+		@include transition-property(height);
+		@include transition-duration(0.5s);
+		img{
+			margin: 0.5em auto;
+		}
+	}
+
+	.stuck{
+		background-color: $header-transparent;
+		position: fixed;
+		z-index: 9000;
+		width: 100%;
+		@include single-box-shadow;
+	}
+	
+
 	h1{
-		font-family: $header-font;
-		font-size: 3em;
-		font-height: 3em;
-		color: $h1-color;
+		font: 3em/1em $header-font;
+		color: $white;
+		&:first-child{
+			margin: 0.5em 0;
+		}
+	}
+
+	h2{
+		font: 1.5em/1em $subheader;
+		color: $white;
+		margin: 0.5em 0;
 	}
 
 	.subheader{
-		font-family: $subheader;
-		font-size: 1.5em;
-		font-height: 1em;
+		font: 1.5em/1em $italics;
 		color: $italic-color;
+		&:first-child{
+			margin: 1em;
+		}
 	}
 
 	.pull-quote{
-		font-family: $subheader;
-		font-size: 2em;
+		font: 1.5em/1em $italics;
 		color: $italic-color;
 		padding: 1em;
+		background-color: darken($background, 25%);
+	}
+
+	section{
+		margin: 0 auto;
+		padding: 0 0.5em;
 	}
 
 	#One{
-		//height: 
+		min-height: 500px;
+		background: 0 50% no-repeat fixed url('../images/Apocalypse.jpg');
+		background-size: cover;
 	}
+
+	#Two{
+		padding: 1em 0;
+		background-color: darken($background, 20%);
+		.pull-quote{
+			display: none;
+		}
+		img{
+			height: 150%;
+			width: 150%;
+		}
+	}
+
+	#Three{
+		padding: 1em 0;
+		min-height: 400px;
+		background-color: darken($background, 30%);
+		p{
+			margin-bottom: 0rem;
+		}
+		p:nth-child(3){
+			@extend .pull-quote;
+			font: 0.6em $italics;
+			text-align: right;
+		}
+	}
+
+	#Sign-Up{
+		padding: 1em 0;
+		min-height: 300px;
+		background-color: darken($background, 40%);
+		h2{
+			text-align: center;
+		}
+		form{
+			margin: 0.5em 0;
+		}
+	}
+
+	.portrait{
+		height: 100px;
+		width: 100px;
+		@include border-radius(50px);
+	}
+
+	input{
+		width: 100%;
+		padding: 0.5em;
+	}
+
+	.button{
+		width: 100%;
+		background-color: darken($background, 60%);
+		border-color: none;
+		margin: 0.5em 0;
+		&:hover,&:active{
+			background-color: darken($background, 75%);
+		}
+	}
+	.fine-print{
+		font: 0.25em/0.25em $body;
+		text-align: center;
+		color: $text-color;
+		border-top: 0.5em solid $background;
+		margin: 0.5em 0;
+	}
+
+	footer{
+		background-color: darken($background, 70%);
+		color: $white;
+		img{
+			margin: 0.5em 0;
+		}
+	}
+
 
 }
 

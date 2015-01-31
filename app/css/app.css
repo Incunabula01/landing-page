@@ -5050,67 +5050,185 @@ blockquote p {
 }
 @font-face {
   font-family: "Alegreya-Black";
-  src: "..fonts/alegreya-black-webfont";
+  src: url('/fonts/alegreya-black-webfont.ttf');
+  src: url('/fonts/alegreya-black-webfont.ttf?#iefix') format('embedded-opentype'), "alegreya-black-webfont.woff";
+  font-weight: "alegreya-black-webfont.eot";
+  font-style: "alegreya-black-webfont.svg";
 }
 @font-face {
   font-family: "Alegreya-Italic";
-  src: "..fonts/alegreya-italic-webfont";
+  src: url('/fonts/alegreya-italic-webfont.ttf');
+  src: url('/fonts/alegreya-italic-webfont.ttf?#iefix') format('embedded-opentype'), "alegreya-italic-webfont.woff";
+  font-weight: "alegreya-italic-webfont.eot";
+  font-style: "alegreya-italic-webfont.svg";
 }
 @font-face {
   font-family: "Alegreya-Regular";
-  src: "..fonts/alegreya-regular-webfont";
+  src: url('/fonts/alegreya-regular-webfont.ttf');
+  src: url('/fonts/alegreya-regular-webfont.ttf?#iefix') format('embedded-opentype'), "alegreya-regular-webfont.woff";
+  font-weight: "alegreya-regular-webfont.eot";
+  font-style: "alegreya-regular-webfont.svg";
 }
 /* all app scss styles here */
-@media only screen and (max-width: 40em) {
+@media only screen {
   body {
     background-color: #EEEBE6;
-    font-family: "Georgia", serif;
+    font: 26px/22px "Georgia", serif;
     height: 100%;
+    color: #050504;
   }
 
-  p {
-    padding: 1em;
+  a {
+    font: "Georgia", serif;
+    color: #ffffff;
+  }
+
+  p:first-child:first-letter {
+    float: left;
+    font-size: 3em;
+    line-height: 1em;
+    padding-right: 0.2em;
   }
 
   header {
-    background-color: #FFFFFF;
-    display: block;
-    position: relative;
-    min-height: 100px;
-  }
-  header .stuck {
-    background-color: rgba(255, 255, 255, 0.5);
-    position: fixed;
-    min-height: 55px;
-    -moz-transition-property: width;
-    -o-transition-property: width;
-    -webkit-transition-property: width;
-    transition-property: width;
+    height: 100px;
+    -moz-transition-property: height;
+    -o-transition-property: height;
+    -webkit-transition-property: height;
+    transition-property: height;
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
   }
+  header img {
+    margin: 0.5em auto;
+  }
+
+  .stuck {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    z-index: 9000;
+    width: 100%;
+    -moz-box-shadow: 0px 5px #333333;
+    -webkit-box-shadow: 0px 5px #333333;
+    box-shadow: 0px 5px #333333;
+  }
 
   h1 {
-    font-family: "Alegreya-Black", serif;
-    font-size: 3em;
-    font-height: 3em;
-    color: #4C4C4C;
+    font: 3em/1em "Alegreya-Black", serif;
+    color: #ffffff;
+  }
+  h1:first-child {
+    margin: 0.5em 0;
+  }
+
+  h2 {
+    font: 1.5em/1em "Alegreya-Regular", serif;
+    color: #ffffff;
+    margin: 0.5em 0;
   }
 
   .subheader {
-    font-family: "Alegreya-Italic", serif;
-    font-size: 1.5em;
-    font-height: 1em;
-    color: #828282;
+    font: 1.5em/1em "Alegreya-Italic", serif;
+    color: #ffffff;
+  }
+  .subheader:first-child {
+    margin: 1em;
   }
 
-  .pull-quote {
-    font-family: "Alegreya-Italic", serif;
-    font-size: 2em;
-    color: #828282;
+  .pull-quote, #Three p:nth-child(3) {
+    font: 1.5em/1em "Alegreya-Italic", serif;
+    color: #ffffff;
     padding: 1em;
+    background-color: #baae9a;
+  }
+
+  section {
+    margin: 0 auto;
+    padding: 0 0.5em;
+  }
+
+  #One {
+    min-height: 500px;
+    background: 0 50% no-repeat fixed url("../images/Apocalypse.jpg");
+    background-size: cover;
+  }
+
+  #Two {
+    padding: 1em 0;
+    background-color: #c5baa9;
+  }
+  #Two .pull-quote, #Two #Three p:nth-child(3), #Three #Two p:nth-child(3) {
+    display: none;
+  }
+  #Two img {
+    height: 150%;
+    width: 150%;
+  }
+
+  #Three {
+    padding: 1em 0;
+    min-height: 400px;
+    background-color: #b0a28b;
+  }
+  #Three p {
+    margin-bottom: 0rem;
+  }
+  #Three p:nth-child(3) {
+    font: 0.6em "Alegreya-Italic", serif;
+    text-align: right;
+  }
+
+  #Sign-Up {
+    padding: 1em 0;
+    min-height: 300px;
+    background-color: #9b8a6d;
+  }
+  #Sign-Up h2 {
+    text-align: center;
+  }
+  #Sign-Up form {
+    margin: 0.5em 0;
+  }
+
+  .portrait {
+    height: 100px;
+    width: 100px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5em;
+  }
+
+  .button {
+    width: 100%;
+    background-color: #605542;
+    border-color: none;
+    margin: 0.5em 0;
+  }
+  .button:hover, .button:active {
+    background-color: #332d23;
+  }
+
+  .fine-print {
+    font: 0.25em/0.25em "Georgia", serif;
+    text-align: center;
+    color: #050504;
+    border-top: 0.5em solid #EEEBE6;
+    margin: 0.5em 0;
+  }
+
+  footer {
+    background-color: #423a2d;
+    color: #ffffff;
+  }
+  footer img {
+    margin: 0.5em 0;
   }
 }
 

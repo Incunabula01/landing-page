@@ -1,6 +1,7 @@
 $header-color: #FFFFFF;
 $background: #EEEBE6;
-$text-color: #E7E7E7;
-$header-transparent: rgba(255,255,255,0.5);
+$text-color: darken($background, 90%);
+$header-transparent: rgba(255,255,255,0.9);
 $h1-color: #4C4C4C;
-$italic-color: 	#828282;
+$italic-color: 	#ffffff;
+$white: #ffffff;
