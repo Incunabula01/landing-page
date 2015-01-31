@@ -1,0 +1,10 @@
+@import "compass/css3/font-face";
+
+
+@include font-face("Alegreya-Black", "..fonts/alegreya-black-webfont");
+@include font-face("Alegreya-Italic", "..fonts/alegreya-italic-webfont");
+@include font-face("Alegreya-Regular", "..fonts/alegreya-regular-webfont");
+
+$header-font: 'Alegreya-Black', serif;
+$subheader: 'Alegreya-Italic', serif;
+$body: 'Georgia', serif;

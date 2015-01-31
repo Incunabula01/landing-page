@@ -1,4 +1,63 @@
 /* all app scss styles here */
 
 @import "compass/css3";
+@import "compass/css3/transition";
 @import "compass/utilities";
+
+
+
+@media #{$small-only} { // mobile screens
+
+	body{
+		background-color: $background;
+		font-family: $body;
+		height: 100%;
+	}
+	p{
+		padding: 1em;
+	}
+
+	header{
+		background-color: $header-color;
+		display: block;
+		position: relative;
+		min-height: 100px;
+		.stuck{
+			background-color: $header-transparent;
+			position: fixed;
+			min-height: 55px;
+			@include transition-property(width);
+			@include transition-duration(0.5s);
+		}
+	}
+
+	h1{
+		font-family: $header-font;
+		font-size: 3em;
+		font-height: 3em;
+		color: $h1-color;
+	}
+
+	.subheader{
+		font-family: $subheader;
+		font-size: 1.5em;
+		font-height: 1em;
+		color: $italic-color;
+	}
+
+	.pull-quote{
+		font-family: $subheader;
+		font-size: 2em;
+		color: $italic-color;
+		padding: 1em;
+	}
+
+	#One{
+		//height: 
+	}
+
+}
+
+@media #{$large-only} { // desktop screens
+
+}
