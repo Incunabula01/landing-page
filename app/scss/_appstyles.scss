@@ -90,10 +90,20 @@
 	#Two{
 		padding: 1em 0;
 		background-color: darken($background, 20%);
+		h2{
+			margin: 0.2 0;
+			text-align: center;
+		}
+		.subheader{
+			font-size: 50%;
+			line-height: 50%;
+			text-align: center;
+			margin-bottom: 1em;
+		}
 		.pull-quote{
 			display: none;
 		}
-		img{
+		img:nth-child(2){
 			height: 150%;
 			width: 150%;
 		}
@@ -126,9 +136,8 @@
 	}
 
 	.portrait{
-		height: 100px;
-		width: 100px;
 		@include border-radius(50px);
+		margin: 0 25%;
 	}
 
 	input{
@@ -146,19 +155,18 @@
 		}
 	}
 	.fine-print{
-		font: 0.25em/0.25em $body;
+		margin: 1em;
+		padding: 1em;
+		font: 0.5em $sans-serif;
 		text-align: center;
-		color: $text-color;
-		border-top: 0.5em solid $background;
+		color: $white;
 		margin: 0.5em 0;
 	}
 
 	footer{
 		background-color: darken($background, 70%);
 		color: $white;
-		img{
-			margin: 0.5em 0;
-		}
+		min-height: 200px;
 	}
 
 
