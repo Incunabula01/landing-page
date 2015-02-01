@@ -3,15 +3,17 @@
 (function() {
 
 	var header = $('header');
-	var sticky = $('#sticky-header');
 
 	header.waypoint({
 		handler: function(direction){
+
+			var sticky = $('#sticky-header');
+
 			if(direction === 'down'){
 				sticky.addClass('stuck');
 				$(this).css({
 					height: 60
-				}, 200);
+				});
 			} else {
 				sticky.removeClass('stuck');
 				$(this).css({
@@ -26,26 +28,27 @@
 
 	$('#Two').waypoint({
 		handler: function(direction){
+
+			var pullQuote = $('.pull-quote');
+
 			if(direction === 'down'){
-				$('.pull-quote').fadeIn({
-					easeInQuad: 200
-				});
-				return true;
+				pullQuote.fadeIn(3000);
+			} else {
+				pullQuote.fadeOut(2000);
+			} 
+		},
+		offset: function(){
+
+			var sectionWidth = $('#Two').outerHeight();
+			var windowWidth = $(window).width();
+
+			if(windowWidth <= 640){
+				return	sectionWidth / 6;
+			} else {
+				return  sectionWidth / 2;
 			}
-			return false;
+			
 		}
 	});
-
-	$('#Three').waypoint({
-		handler: function(direction){
-			if(direction === 'down'){
-				$('p').fadeIn({
-					easeInQuad: 200
-				});
-				return true;
-			}
-			return false;
-		}
-	})
 	
 })(jQuery);

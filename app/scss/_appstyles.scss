@@ -20,19 +20,14 @@
 		font: $body;
 		color: $white;
 	}
-	p{
-		&:first-child:first-letter{
-			float:left;
-			font-size: 3em;
-			line-height: 1em;
-			padding-right: 0.2em;
-		}
+
+	img{
+		display: block;
+		margin: auto;
 	}
 
 	header{
 		height: 100px;
-		@include transition-property(height);
-		@include transition-duration(0.5s);
 		img{
 			margin: 0.5em auto;
 		}
@@ -44,6 +39,8 @@
 		z-index: 9000;
 		width: 100%;
 		@include single-box-shadow;
+		@include transition-property(height);
+		@include transition-duration(0.5s);
 	}
 	
 
@@ -59,6 +56,10 @@
 		font: 1.5em/1em $subheader;
 		color: $white;
 		margin: 0.5em 0;
+		text-align: center;
+		.pull-quote{
+			@include transition(all);
+		}
 	}
 
 	.subheader{
@@ -72,9 +73,19 @@
 	.pull-quote{
 		font: 1.5em/1em $italics;
 		color: $italic-color;
+		margin: 1em 0;
 		padding: 1em;
 		background-color: darken($background, 25%);
 	}
+
+	.dropcap{
+		float:left;
+		font-size: 5.5em;
+		line-height: 1em;
+		padding-right: 0.2em;
+		padding-top: 0em;
+	}
+	
 
 	section{
 		margin: 0 auto;
@@ -82,7 +93,7 @@
 	}
 
 	#One{
-		min-height: 500px;
+		min-height: 550px;
 		background: 0 50% no-repeat fixed url('../images/Apocalypse.jpg');
 		background-size: cover;
 	}
@@ -91,14 +102,14 @@
 		padding: 1em 0;
 		background-color: darken($background, 20%);
 		h2{
-			margin: 0.2 0;
-			text-align: center;
+			margin: 0.2em 0;
 		}
 		.subheader{
 			font-size: 50%;
 			line-height: 50%;
 			text-align: center;
-			margin-bottom: 1em;
+			margin-top: 0em;
+			margin-bottom: 2em;
 		}
 		.pull-quote{
 			display: none;
@@ -120,6 +131,7 @@
 			@extend .pull-quote;
 			font: 0.6em $italics;
 			text-align: right;
+			margin: 0em auto 1em auto;
 		}
 	}
 
@@ -137,7 +149,20 @@
 
 	.portrait{
 		@include border-radius(50px);
-		margin: 0 25%;
+	}
+
+	.button-group{
+		text-align: center;
+		margin: 0em auto;
+		border-top: 1px solid $white;
+		.button.social{
+			padding-right: 1rem;
+			padding-left: 1rem;
+			width: 50px;
+			height: 50px;
+			@include border-radius(25px);
+			display: inline-block;
+		}
 	}
 
 	input{
@@ -150,6 +175,7 @@
 		background-color: darken($background, 60%);
 		border-color: none;
 		margin: 0.5em 0;
+		font: 1em/1em $body;
 		&:hover,&:active{
 			background-color: darken($background, 75%);
 		}
@@ -173,5 +199,7 @@
 }
 
 @media #{$large-only} { // desktop screens
-
+	#One{
+		min-height: 400px;
+	}
 }

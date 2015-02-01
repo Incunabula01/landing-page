@@ -5083,23 +5083,13 @@ blockquote p {
     color: #ffffff;
   }
 
-  p:first-child:first-letter {
-    float: left;
-    font-size: 3em;
-    line-height: 1em;
-    padding-right: 0.2em;
+  img {
+    display: block;
+    margin: auto;
   }
 
   header {
     height: 100px;
-    -moz-transition-property: height;
-    -o-transition-property: height;
-    -webkit-transition-property: height;
-    transition-property: height;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
   }
   header img {
     margin: 0.5em auto;
@@ -5113,6 +5103,14 @@ blockquote p {
     -moz-box-shadow: 0px 5px #333333;
     -webkit-box-shadow: 0px 5px #333333;
     box-shadow: 0px 5px #333333;
+    -moz-transition-property: height;
+    -o-transition-property: height;
+    -webkit-transition-property: height;
+    transition-property: height;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
   }
 
   h1 {
@@ -5127,6 +5125,13 @@ blockquote p {
     font: 1.5em/1em "Alegreya-Regular", serif;
     color: #ffffff;
     margin: 0.5em 0;
+    text-align: center;
+  }
+  h2 .pull-quote, h2 #Three p:nth-child(3), #Three h2 p:nth-child(3) {
+    -moz-transition: all;
+    -o-transition: all;
+    -webkit-transition: all;
+    transition: all;
   }
 
   .subheader {
@@ -5140,8 +5145,17 @@ blockquote p {
   .pull-quote, #Three p:nth-child(3) {
     font: 1.5em/1em "Alegreya-Italic", serif;
     color: #ffffff;
+    margin: 1em 0;
     padding: 1em;
     background-color: #baae9a;
+  }
+
+  .dropcap {
+    float: left;
+    font-size: 5.5em;
+    line-height: 1em;
+    padding-right: 0.2em;
+    padding-top: 0em;
   }
 
   section {
@@ -5150,7 +5164,7 @@ blockquote p {
   }
 
   #One {
-    min-height: 500px;
+    min-height: 550px;
     background: 0 50% no-repeat fixed url("../images/Apocalypse.jpg");
     background-size: cover;
   }
@@ -5160,14 +5174,14 @@ blockquote p {
     background-color: #c5baa9;
   }
   #Two h2 {
-    margin: 0.2 0;
-    text-align: center;
+    margin: 0.2em 0;
   }
   #Two .subheader {
     font-size: 50%;
     line-height: 50%;
     text-align: center;
-    margin-bottom: 1em;
+    margin-top: 0em;
+    margin-bottom: 2em;
   }
   #Two .pull-quote, #Two #Three p:nth-child(3), #Three #Two p:nth-child(3) {
     display: none;
@@ -5188,6 +5202,7 @@ blockquote p {
   #Three p:nth-child(3) {
     font: 0.6em "Alegreya-Italic", serif;
     text-align: right;
+    margin: 0em auto 1em auto;
   }
 
   #Sign-Up {
@@ -5206,7 +5221,22 @@ blockquote p {
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
-    margin: 0 25%;
+  }
+
+  .button-group {
+    text-align: center;
+    margin: 0em auto;
+    border-top: 1px solid #ffffff;
+  }
+  .button-group .button.social {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    display: inline-block;
   }
 
   input {
@@ -5219,6 +5249,7 @@ blockquote p {
     background-color: #605542;
     border-color: none;
     margin: 0.5em 0;
+    font: 1em/1em "Georgia", serif;
   }
   .button:hover, .button:active {
     background-color: #332d23;
@@ -5237,6 +5268,11 @@ blockquote p {
     background-color: #423a2d;
     color: #ffffff;
     min-height: 200px;
+  }
+}
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  #One {
+    min-height: 400px;
   }
 }
 
