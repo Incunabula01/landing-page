@@ -17,14 +17,14 @@
 			} else {
 				sticky.removeClass('stuck');
 				$(this).css({
-					height: "auto"
+					height: 'auto'
 				});
 			}
 		},
 		offset: function(){
 			return -header.outerHeight();
 		}
-	}) 
+	}); 
 
 	$('#Two').waypoint({
 		handler: function(direction){
@@ -33,7 +33,7 @@
 
 			if(direction === 'down'){
 				pullQuote.fadeIn(3000);
-			} else {
+			} else if(direction === 'up'){
 				pullQuote.fadeOut(2000);
 			} 
 		},

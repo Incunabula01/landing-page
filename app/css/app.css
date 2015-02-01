@@ -5165,7 +5165,7 @@ blockquote p {
 
   #One {
     min-height: 550px;
-    background: 0 50% no-repeat fixed url("../images/Apocalypse.jpg");
+    background: 0 50% no-repeat fixed url("../images/Apocalypse2.jpg");
     background-size: cover;
   }
 
@@ -5256,12 +5256,10 @@ blockquote p {
   }
 
   .fine-print {
-    margin: 1em;
     padding: 1em;
     font: 0.5em "Helvetica", sans-serif;
     text-align: center;
     color: #ffffff;
-    margin: 0.5em 0;
   }
 
   footer {
