@@ -1,9 +1,46 @@
-@import "compass/css3/font-face";
+/*@import "compass/css3/font-face";
 
 
-@include font-face("Alegreya-Black", "alegreya-black-webfont.woff","alegreya-black-webfont.ttf","alegreya-black-webfont.eot","alegreya-black-webfont.svg");
-@include font-face("Alegreya-Italic", "alegreya-italic-webfont.woff","alegreya-italic-webfont.ttf","alegreya-italic-webfont.eot","alegreya-italic-webfont.svg");
-@include font-face("Alegreya-Regular", "alegreya-regular-webfont.woff","alegreya-regular-webfont.ttf","alegreya-regular-webfont.eot","alegreya-regular-webfont.svg");
+@include font-face("Alegreya-Black", font-files("alegreya-black-webfont.woff","alegreya-black-webfont.ttf","alegreya-black-webfont.svg"),"alegreya-black-webfont.eot");
+@include font-face("Alegreya-Italic", font-files("alegreya-italic-webfont.woff","alegreya-italic-webfont.ttf","alegreya-italic-webfont.svg"),"alegreya-italic-webfont.eot");
+@include font-face("Alegreya-Regular", font-files("alegreya-regular-webfont.woff","alegreya-regular-webfont.ttf","alegreya-regular-webfont.svg"),"alegreya-regular-webfont.eot");
+*/
+
+@font-face {
+      font-family: 'Alegreya-Black';
+      src: url('../fonts/alegreya-black-webfont.eot');
+      src: url('../fonts/alegreya-black-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/alegreya-black-webfont.woff') format('woff'),
+             url('../fonts/alegreya-black-webfont.ttf') format('truetype'),
+             url('../fonts/alegreya-black-webfont.svg#alegreya-black-webfont') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      
+  }
+
+ @font-face {
+      font-family: 'Alegreya-Regular';
+      src: url('../fonts/alegreya-regular-webfont.eot');
+      src: url('../fonts/alegreya-regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/alegreya-regular-webfont.woff') format('woff'),
+             url('../fonts/alegreya-regular-webfont.ttf') format('truetype'),
+             url('../fonts/alegreya-regular-webfont.svg#alegreya-regular-webfont') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      
+  }
+
+@font-face {
+      font-family: 'Alegreya-Regular';
+      src: url('../fonts/alegreya-italic-webfont.eot');
+      src: url('../fonts/alegreya-italic-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/alegreya-italic-webfont.woff') format('woff'),
+             url('../fonts/alegreya-italic-webfont.ttf') format('truetype'),
+             url('../fonts/alegreya-italic-webfont.svg#alegreya-italic-webfont') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      
+  }
 
 $header-font: 'Alegreya-Black', serif;
 $subheader: 'Alegreya-Regular', serif;
